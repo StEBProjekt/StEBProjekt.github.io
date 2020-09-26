@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Quiz StEB</title>
+
+    <script>
+        function submitAnswers() { // example
+            // alert("Wollen Sie die Antworten wirklich einreichen?")
+
+            var ans = getAnswerByName("q0")
+            ans = parseMessage(ans)
+
+            sendDataToServer(ans)
+        }
+
+        function getAnswerByName(name = "q0") {
+            var ans = document.getElementsByName(name);
+
+            ans = Array.from(ans)
+            ans = ans.map(i => i.checked)
+            ans = ans.indexOf(true);
+
+            return ans;
+        }
+
+        function parseMessage(ans) {
+            var time = new Date();
+            time = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+            return full_ans = "Antwort " + String(ans) + " wurde am " + time + " ausgewählt";
+        }
+
+        function sendDataToServer(data = "") {
+            // do nothing since this is the online version
+            // const url = "https://782578d109261a97f72c1ceba778f967.m.pipedream.net"
+
+            // req = new XMLHttpRequest();
+            // req.open("POST", url);
+            // req.send(data);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Quiz</h1>
+
+    <p>Fragentext Nr. 1?</p>
+
+    <label>
+        <input type="radio" name="q0">
+        Antwort 0
+    </label>
+
+    <label>
+        <input type="radio" name="q0">
+        Antwort 1
+    </label>
+
+    <label>
+        <input type="radio" name="q0">
+        Antwort 2
+    </label>
+
+    <label>
+        <input type="radio" name="q0">
+        Antwort 3
+    </label>
+
+    <input type="button" onclick="submitAnswers()" value="Antwort einreichen">
+
+
+
+</body>
