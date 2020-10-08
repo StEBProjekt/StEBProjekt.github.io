@@ -7,14 +7,25 @@
 
     <title>Quiz StEB</title>
 
+
     <script>
-        function submitAnswers() { // example
-            // alert("Wollen Sie die Antworten wirklich einreichen?")
+        var valid_school_ids = ["gze0", "gze1", "gze2", "gze3"]
+        const server_url = "https://a2bdcc8c2da442e63eb37a52e6965829.m.pipedream.net";
 
-            var ans = getAnswerByName("q0")
-            ans = parseMessage(ans)
+        function getTimeString() {
+            var d = new Date();
+            return d.toLocaleString();
+        }
 
-            sendDataToServer(ans)
+        function dicttojson(dic) {
+            return JSON.stringify(dic)
+        }
+
+        function submittoServer(data) {
+            req = new XMLHttpRequest();
+            req.open("POST", server_url);
+            req.send(data);
+            console.log("data sent to server");
         }
 
         function getAnswerByName(name = "q0") {
@@ -27,53 +38,199 @@
             return ans;
         }
 
-        function parseMessage(ans) {
-            var time = new Date();
-            time = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
-            return full_ans = "Antwort " + String(ans) + " wurde am " + time + " ausgewählt";
+        function getAllAnswers(num = 2) {
+            var answers = [];
+
+            for (var i = 0; i < num; i++) {
+                answers.push(getAnswerByName("q" + String(i)));
+            }
+            return answers;
         }
 
-        function sendDataToServer(data = "") {
-            console.log("in this current version your answers will not be sent to some server");
-            // do nothing since this is the online version
-            // const url = "https://782578d109261a97f72c1ceba778f967.m.pipedream.net"
-
-            // req = new XMLHttpRequest();
-            // req.open("POST", url);
-            // req.send(data);
+        function getSchoolID() {
+            return document.getElementById("schoolid").value;
         }
+
+        function getPersonID() {
+            return document.getElementById("personid").value;
+        }
+
+        function evaluateSchoolID() {
+            var id = getSchoolID();
+            console.log('school id was evaluated')
+            if (valid_school_ids.includes(id)) {
+                document.getElementById("validity").innerHTML = "Vierstelliger Schulcode (richtig):";
+                return true;
+            } else {
+                document.getElementById("validity").innerHTML = "Vierstelliger Schulcode (noch nicht richtig)";
+                return false;
+            }
+        }
+
+        function init() {
+            var schoolid_input = document.getElementById("schoolid");
+            schoolid_input.addEventListener("change", evaluateSchoolID);
+            console.log("inited")
+        }
+
+
+        function submitAnswers() {
+            var schoolid = getSchoolID();
+            var personid = getPersonID();
+            var school_id_validity = evaluateSchoolID(schoolid);
+
+            var anwers = getAllAnswers();
+            var time = getTimeString();
+
+
+            var message = {
+                "schoolid": schoolid,
+                "personid": personid,
+                "answers": anwers,
+                "school_id_validity": school_id_validity,
+                "time": time
+            };
+
+            if (confirm("Willst du deine Antworten wirklich abgeben?")) {
+                message = dicttojson(message);
+                console.log(message);
+                submittoServer(message);
+            } else {
+                console.log("aborted due to missing confimation")
+            }
+
+        }
+
+        window.onload = init;
     </script>
 
 </head>
 
+
 <body>
+    <div class='main_grid'>
+        <div class="header">
+            <h1>Quiz StEB Projekt</h1>
+        </div>
 
-    <h1>Quiz</h1>
 
-    <p>Fragentext Nr. 1?</p>
+        <div class="video_grid">
 
-    <label>
-        <input type="radio" name="q0">
-        Antwort 0
-    </label>
+            <div class="group_grid">
+                <div>
+                    <h2>Dateneingabe</h2>
+                    <p>Hier kommen die Schuldaten rein</p>
+                </div>
 
-    <label>
-        <input type="radio" name="q0">
-        Antwort 1
-    </label>
+                <div>
+                    <br>
+                    <br>
+                    <table>
+                        <tr>
+                            <label>
+                                <th id='validity'>
+                                    Vierstelliger Schulcode (noch nicht richtig)
+                                </th>
+                                <th>
+                                    <input type="text" id="schoolid">
+                                </th>
+                            </label>
+                        </tr>
 
-    <label>
-        <input type="radio" name="q0">
-        Antwort 2
-    </label>
+                        <tr>
+                            <label>
+                                <th>
+                                    Deine Initialien:
+                                </th>
+                                <th>
+                                    <input type="text" id="personid">
+                                </th>
+                            </label>
+                        </tr>
 
-    <label>
-        <input type="radio" name="q0">
-        Antwort 3
-    </label>
 
-    <input type="button" onclick="submitAnswers()" value="Antwort einreichen">
+                    </table>
 
+
+                </div>
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Frage Nr. 1: Hier kommen eine Frage, die von einer Gruppe gestellt wurde hin?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q0">
+                        Antwort 0
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q0">
+                        Antwort 1
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q0">
+                        Antwort 2
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q0">
+                        Antwort 3
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Frage Nr. 1: Hier kommen eine Frage, die von einer Gruppe gestellt wurde hin?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q1">
+                        Antwort 0
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q1">
+                        Antwort 1
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q1">
+                        Antwort 2
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q1">
+                        Antwort 3
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            <div class="to_next">
+                <button class="button" onclick="submitAnswers()">Antworten abgeben</button>
+            </div>
+        </div>
+
+    </div>
 
 
 </body>
