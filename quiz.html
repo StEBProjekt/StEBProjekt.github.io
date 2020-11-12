@@ -11,7 +11,7 @@
     <script>
         var valid_school_ids = ["gze0", "gze1", "gze2", "gze3"]
         const server_url = "https://a2bdcc8c2da442e63eb37a52e6965829.m.pipedream.net";
-        const num_questions = 2;
+        const num_questions = 32;
 
         function getTimeString() {
             var d = new Date();
@@ -156,34 +156,35 @@
                 </div>
             </div>
 
+            <!-- 1. Kerzen und Wachs -->
             <div class="group_grid">
                 <div>
-                    <p>Frage Nr. 1: Hier kommen eine Frage, die von einer Gruppe gestellt wurde hin?</p>
+                    <p>Was brennt an einer Kerze?</p>
 
                 </div>
 
                 <div>
                     <label>
                         <input type="radio" name="q0">
-                        Antwort 0
+                        Festes Wachs
                     </label>
                     <br><br>
 
                     <label>
                         <input type="radio" name="q0">
-                        Antwort 1
+                        Der Docht
                     </label>
                     <br><br>
 
                     <label>
                         <input type="radio" name="q0">
-                        Antwort 2
+                        Flüssiges Wachs
                     </label>
                     <br><br>
 
                     <label>
                         <input type="radio" name="q0">
-                        Antwort 3
+                        Wachsdampf
                     </label>
                 </div>
 
@@ -191,32 +192,1024 @@
 
             <div class="group_grid">
                 <div>
-                    <p>Frage Nr. 1: Hier kommen eine Frage, die von einer Gruppe gestellt wurde hin?</p>
-
+                    <p>Kurz noch Spiegeleier braten – kein Problem! Auf einmal entsteht ein kleiner Brand in der Pfanne, wie löscht du den Brand?</p>
                 </div>
 
                 <div>
                     <label>
                         <input type="radio" name="q1">
-                        Antwort 0
+                        Ich gieße Wasser in die Pfanne
                     </label>
                     <br><br>
 
                     <label>
                         <input type="radio" name="q1">
-                        Antwort 1
+                        Ich nehme die Pfanne mit nach draußen an die Luft und puste noch extra
                     </label>
                     <br><br>
 
                     <label>
                         <input type="radio" name="q1">
-                        Antwort 2
+                        Ich schnappe mir schnell einen passenden Deckel und lege ihn so drauf, dass die Pfanne
+                        geschlossen ist
                     </label>
                     <br><br>
 
                     <label>
                         <input type="radio" name="q1">
-                        Antwort 3
+                        Ich wedle mit einem Handtuch damit das Feuer aus geht
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Warum soll man die Fenster schließen wenn es ein Feuer gibt?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q2">
+                        Damit sich das Feuer nicht nach draußen überträgt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q2">
+                        Weil sonst jemand auf den Gedanken kommen könnte, aus dem Fenster zu springen
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q2">
+                        Damit das Feuer keine neue Luft zum Brennen ha
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q2">
+                        Das ist einfach nur Vorschrift und hat keinen weiteren Grund
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Warum soll man die Fenster schließen wenn es ein Feuer gibt?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q3">
+                        Damit sich das Feuer nicht nach draußen überträgt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q3">
+                        Weil sonst jemand auf den Gedanken kommen könnte, aus dem Fenster zu springen
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q3">
+                        Damit das Feuer keine neue Luft zum Brennen ha
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q3">
+                        Das ist einfach nur Vorschrift und hat keinen weiteren Grund
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- 2. Flettners Flitzer -->
+            <div class="group_grid">
+                <div>
+                    <p>Welche Form ist für Flettnerrotoren am besten?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q4">
+                        Zylinder (rund Säule)
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q4">
+                        Würfel
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q4">
+                        Kugel
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q4">
+                        Die Form ist völlig egal
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Warum muss die Säule gedreht werden?</p>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q5">
+                        Die Säule muss gar nicht gedreht werden
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q5">
+                        Damit auf Gegenüberliegenden Seiten der Säule unterschiedlich viel Luft ist (Druckunterschied)
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q5">
+                        Damit das Boot stabil im Wasser liegt und das Boot nicht umkippt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q5">
+                        Die Luft dreht die Säule. So wird Strom produziert
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Wieso baut man Schiffe mit Flettner Rotoren?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q6">
+                        Um die Windenergie zu nutzen und Treibstoff zu sparen. Ein modernes Segel
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q6">
+                        Weil man sie nicht so wie nasse Segel immer wieder trockenen muss
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q6">
+                        Um die Schiffe moderner zu gestalten
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q6">
+                        Man nutzt die zum Teil auch als mobile Leuchttürme
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Wo im Alltag begegnet euch noch der Magnus Effekt?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q7">
+                        Bei Hubschraubern
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q7">
+                        Bei Kurvenförmigen Flugbahnen von Bällen z.B. Bananenflanke
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q7">
+                        Haushaltsüblichen Ventilatoren
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q7">
+                        Beim Umrühren eines Kakaos
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- 3. Elektromagnetismus -->
+            <div class="group_grid">
+                <div>
+                    <p>Warum hat das Transportieren der Büroklammern (Versuch 1) mit einem normalen Magneten NICHT funktioniert?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q8">
+                        Die Büroklammern gingen nicht wieder ab
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q8">
+                        Die Büroklammern sind nicht magnetisch
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q8">
+                        Wir haben nicht richtig gezielt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q8">
+                        Die Büroklammern waren zu schwer
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Die mit Draht umwickelte Schraube hat für den Transport der Büroklammern (Versuch 1) funktioniert, aber erst, als wir eine Batterie angeschlossen haben. Welche Kräfte haben hier also scheinbar zusammengearbeitet?</p>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q9">
+                        Schwerkraft und Muskelkraft
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q9">
+                        Magnetismus und Schwerkraft
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q9">
+                        Elektrizität und Magnetismus
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q9">
+                        Muskelkraft und Elektrizität
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Die Schraube war nicht magnetisch. Als die Batterie Strom geliefert hat, wurde sie schwach magnetisch. Das Rohr war auch nicht magnetisch, konnte aber trotzdem den Fall abbremsen (Versuch 2). Hier gab es aber keine Batterie. Wo könnte
+                        der Strom hergekommen sein?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q10">
+                        aus der Steckdose
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q10">
+                        aus der Hand
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q10">
+                        aus der Luft
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q10">
+                        vom fallenden Magneten
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Wenn wir die Batterie mit den Magneten an beiden Enden in der Drahtröhre festhalten und so verhindern würden, dass sie von selbst losfährt, was glaubt ihr passiert mit der Energie, die sich aufstaut? (Versuch 3)</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q11">
+                        Batterie wird heiß
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q11">
+                        Batterie macht Geräusche
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q11">
+                        Batterie dreht sich schnell um die eigene Achse
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q11">
+                        Draht verbiegt sich
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- 4. Gravitation -->
+            <div class="group_grid">
+                <div>
+                    <p>Wie wird die Gravitationskraft auch genannt?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q12">
+                        Schwerkraft
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q12">
+                        Fliehkraft
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q12">
+                        Zentripetalkraft
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q12">
+                        Zentrifugalkraft
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Wie ist die Reichweite Gravitation?</p>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q13">
+                        Die Gravitation hat eine unendliche Reichweite und kann nicht abgeschirmt werden
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q13">
+                        Die Gravitation hat eine geringe Reichweite und kann abgeschirmt werden
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q13">
+                        Die Gravitation hat eine keine Reichweite
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q13">
+                        Die Gravitation hat eine geringe Reichweite und kann nicht abgeschirmt werden
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Wieso „klebt“ die Karte an dem Glas?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q14">
+                        Weil die Zentripetalkraft das Wasser an die Innenseite des Glases drückt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q14">
+                        Weil der Luftdruck stärker als die Gravitation ist und gegen die Karte drückt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q14">
+                        Weil Wasser eine höhere Dichte als Luft hat
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q14">
+                        Weil Wasser eine niedrigere Dichte als Luft hat
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Auf welchem Planeten wirkt die Gravitationskraft am stärksten?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q15">
+                        Auf dem Mond (Masse:0,00073 x 10 hoch 26 kg)
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q15">
+                        Auf der Erde (Masse: 0,059 x 10 hoch 26 kg)
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q15">
+                        Auf dem Saturn (Masse: 5,7 x 10 hoch 26 kg)
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q15">
+                        Auf dem Mars (Masse: 0,00639 x 10 hoch 26 kg)
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- 5. Rückstoß-->
+            <div class="group_grid">
+                <div>
+                    <p>Was passiert, wenn eine Person auf ein Skatboard eine andere Person auf einem Skatboard wegschiebt?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q16">
+                        nur die Person, welche wegeschoben wird bewegt sich
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q16">
+                        nur die Person, welche wegscheibt bewegt sich
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q16">
+                        beide Personen bewegen sich
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q16">
+                        keine der beiden Personen bewegen sich
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Welche Kräfte haben eine Gegenkraft?</p>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q17">
+                        alle
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q17">
+                        keine
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q17">
+                        nur vertikale Kräfte
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q17">
+                        nur horizontale Kräfte
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Woher kommt die Kraft beim Raketenstart?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q18">
+                        Essig
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q18">
+                        das entstehende Gas
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q18">
+                        Backpulver
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q18">
+                        die entstehende Flüssigkeit
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Warum muss eine Rakete genau einen Öffnung nach unten haben?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q19">
+                        damit die Rakete durch den Rückstoß fliegen kann
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q19">
+                        damit der Essig rausfließen kann
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q19">
+                        damit das Backpulver rausfallen kann
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q19">
+                        damit Luft in die Rakete kommen kann
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- 6. Druck in Gasen -->
+            <div class="group_grid">
+                <div>
+                    <p>Wie verhalten sich Luftteilchen bei kalten Temperaturen?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q20">
+                        Sie breiten sich aus
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q20">
+                        Sie gehen eng zusammen
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q20">
+                        Sie vergrößern sich
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q20">
+                        Sie explodieren
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Eine verschlossene Plastikflasche zieht sich, nachdem sie mit heißem Wasser befüllt wurde und danach in kaltes Wasser gestellt wurde, zusammen, weil...</p>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q21">
+                        die Luftteilchen in der Flasche nach außen verschwinden
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q21">
+                        sich einige Luftteilchen auflösen
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q21">
+                        die Luftteilchen nun weniger Platz benötigen
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q21">
+                        einige Luftteilchen von der Hitze zerstört wurden
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Warum wird das Ei in die Flasche gedrückt, nachdem die Glasflasche mit dem Ei darauf aus dem heißen Wasser in kaltes Wasser gestellt wurde?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q22">
+                        Es entsteht ein Unterdruck in der Flasche, sodass die Luftteilchen von oben gegen das Ei drücken
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q22">
+                        Das Ei verkleinert sich, weil die Temperatur abkühlt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q22">
+                        Das Ei wird durch die heiße Luft "flutschig"
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q22">
+                        Das Ei wird in die Flasche gesogen, weil es dort wärmer ist
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Das Ei soll nun wieder aus der Flasche heraus, indem die Flasche mit der Öffnung nach unten gerichtet befestigt wird und...</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q23">
+                        das Ei nach einiger Zeit aufgrund der Schwerkraft aus der Flasche gedrückt wird
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q23">
+                        kaltes Wasser über die Flasche gekippt wird, sodass das Ei aus der Flasche gedrückt wird
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="23">
+                        heißes Wasser über die Flasche gekippt wird, sodass das Ei aus der Flasche gedrückt wird
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="23">
+                        in die Flasche vorher Eiswürfel gegeben wurden, sodass das Ei aus der Flasche gedrückt wird
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- 7. Ausdehnen und Zusammenziehen -->
+            <div class="group_grid">
+                <div>
+                    <p>Was passiert, wenn man Luft abkühlt?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q24">
+                        die Luftmoleküle dehnen sich aus -> sie wird "größer"
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q24">
+                        es verändert sich nichts
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q24">
+                        die Luftmoleküle bewegen sich stärker
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q24">
+                        die Luftmoleküle ziehen sich zusammen -> sie wird "kleiner"
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Bei welcher Temperaturveränderung bewegen sich Moleküle schneller/stärker?</p>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q25">
+                        wenn sie abgekühlt werden
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q25">
+                        wenn sie erhitzt werden
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q25">
+                        wenn die Temperatur gleich bleibt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q25">
+                        wenn sie gleich stark erhitzt wie abgekühlt werden
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Bei welcher Temperaturveränderung bewegen sich Moleküle langsamer/schwächer?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q26">
+                        wenn sie abgekühlt werden
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q26">
+                        wenn sie erhitzt werden
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q26">
+                        wenn die Temperatur gleich bleibt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q26">
+                        wenn sie gleich stark erhitzt wie abgekühlt werden
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Wieso spritzt in dem letzten Versuch das rote Wasser aus dem Vulkan heraus?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q27">
+                        weil sich die in der Flasche befindlichen Moleküle durch das zugeschüttete Wasser abkühlen, sie sich dadurch stärker bewegen und mehr Platz einnehmen.
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q27">
+                        weil die sich in der Flasche befindlichen Moleküle durch das zugeschüttete Wasser erhitzen, sie sich dadurch weniger stark bewegen und weniger Platz einnehmen.
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q27">
+                        weil die sich in der Flasche befindlichen Moleküle durch das zugeschüttete Wasser erhitzen, sie sich dadurch stärker bewegen und mehr Platz einnehmen
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q27">
+                        weil die sich in der Flasche befindlichen Moleküle durch das zugeschüttete Wasser abkühlen, sie sich dadurch weniger stark bewegen und weniger Platz einnehmen.
+
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- 8. Tiefseetaucher -->
+            <div class="group_grid">
+                <div>
+                    <p>Was zerstört die Oberflächenspannung?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q28">
+                        Proside
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q28">
+                        Meltide
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q28">
+                        Tenside
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q28">
+                        Sentade
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Durch welche chemischen Stoffe würde die Oberflächenspannung auch zerstört werden?</p>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q29">
+                        Honig
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q29">
+                        Seife
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q29">
+                        Cola
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q29">
+                        Salz
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Wie ist es möglich, dass die Wasseroberfläche anfängt, sich zu wölben?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q30">
+                        Die Wassermoleküle ziehen sich gegenseitig an
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q30">
+                        Die umgebene Luft drückt das Wasser ins Glas
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q30">
+                        Die Gläser sind so geformt, dass das Wasser nicht so schnell überläuft
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q30">
+                        Die Wassermoleküle stoßen sich gegenseitig ab
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="group_grid">
+                <div>
+                    <p>Warum schwimmen die Papierfische auf der Oberfläche, aber die Münzen nicht?</p>
+
+                </div>
+
+                <div>
+                    <label>
+                        <input type="radio" name="q31">
+                        Der Boden vom Glas zieht die Münzen an
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q31">
+                        Sie sind leichter und durch ihre größere Oberfläche wird das Gewicht besser verteilt
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q31">
+                        Papierfische tauchen nicht gerne
+                    </label>
+                    <br><br>
+
+                    <label>
+                        <input type="radio" name="q31">
+                        Kreisrunde Objekte gehen grundsätzlich unter
                     </label>
                 </div>
 
