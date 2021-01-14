@@ -10,27 +10,8 @@
 
 
     <script>
-        var valid_school_ids = ["gze0", "gze1", "gze2", "gze3",
-            "gswi", "gsof", "gsfr", "gsed", "gsje", "gsro", "gsch", "gsme", "gswe", "gspe", "gsos", "gsel"
-        ]
-        const server_url = "https://a2bdcc8c2da442e63eb37a52e6965829.m.pipedream.net";
         const num_questions = 32;
-
-        function getTimeString() {
-            var d = new Date();
-            return d.toLocaleString();
-        }
-
-        function dicttojson(dic) {
-            return JSON.stringify(dic)
-        }
-
-        function submittoServer(data) {
-            req = new XMLHttpRequest();
-            req.open("POST", server_url);
-            req.send(data);
-            console.log("data sent to server");
-        }
+        const right_answers = [3, 2, 2, 1, 0, 1, 0, 1, 0, 2, 0, 3, 0, 0, 1, 2, 2, 0, 1, 0, 1, 2, 0, 2, 3, 1, 0, 2, 2, 1, 0, 1];
 
         function getAnswerByName(name = "q0") {
             var ans = document.getElementsByName(name);
@@ -51,58 +32,27 @@
             return answers;
         }
 
-        function getSchoolID() {
-            return document.getElementById("schoolid").value;
-        }
-
-        function getPersonID() {
-            return document.getElementById("personid").value;
-        }
-
-        function evaluateSchoolID() {
-            var id = getSchoolID();
-            console.log('school id was evaluated')
-            if (valid_school_ids.includes(id)) {
-                document.getElementById("validity").innerHTML = "Vierstelliger Schulcode (richtig):";
-                return true;
-            } else {
-                document.getElementById("validity").innerHTML = "Vierstelliger Schulcode (noch nicht richtig)";
-                return false;
-            }
-        }
 
         function init() {
             var schoolid_input = document.getElementById("schoolid");
-            schoolid_input.addEventListener("change", evaluateSchoolID);
             console.log("inited")
         }
 
 
         function submitAnswers() {
-            var schoolid = getSchoolID();
-            var personid = getPersonID();
-            var school_id_validity = evaluateSchoolID(schoolid);
+            var answers = getAllAnswers();
+            var num_correct = 0;
 
-            var anwers = getAllAnswers();
-            var time = getTimeString();
-
-
-            var message = {
-                "schoolid": schoolid,
-                "personid": personid,
-                "answers": anwers,
-                "school_id_validity": school_id_validity,
-                "time": time
-            };
-
-            if (confirm("Willst du deine Antworten wirklich abgeben?")) {
-                message = dicttojson(message);
-                console.log(message);
-                submittoServer(message);
-            } else {
-                console.log("aborted due to missing confimation")
+            for (var i = 0; i < answers.length; i++) {
+                if (right_answers[i] == answers[i]) {
+                    num_correct++;
+                }
             }
 
+            console.log(answers);
+            console.log(num_correct);
+
+            alert("Du hast " + String(num_correct) + " von 32 Fragen richtig beantwortet!")
         }
 
         window.onload = init;
@@ -120,44 +70,6 @@
 
         <div class="video_grid">
 
-            <div class="group_grid">
-                <div>
-                    <h2>Dateneingabe</h2>
-                    <p>Hier kommen die Schuldaten rein</p>
-                </div>
-
-                <div>
-                    <br>
-                    <br>
-                    <table>
-                        <tr>
-                            <label>
-                                <th id='validity'>
-                                    Vierstelliger Schulcode (noch nicht richtig)
-                                </th>
-                                <th>
-                                    <input type="text" id="schoolid">
-                                </th>
-                            </label>
-                        </tr>
-
-                        <tr>
-                            <label>
-                                <th>
-                                    Deine Initialien:
-                                </th>
-                                <th>
-                                    <input type="text" id="personid">
-                                </th>
-                            </label>
-                        </tr>
-
-
-                    </table>
-
-
-                </div>
-            </div>
 
             <!-- 1. Kerzen und Wachs -->
             <div class="group_grid">
@@ -940,13 +852,13 @@
                     <br><br>
 
                     <label>
-                        <input type="radio" name="23">
+                        <input type="radio" name="q23">
                         heißes Wasser über die Flasche gekippt wird, sodass das Ei aus der Flasche gedrückt wird
                     </label>
                     <br><br>
 
                     <label>
-                        <input type="radio" name="23">
+                        <input type="radio" name="q23">
                         in die Flasche vorher Eiswürfel gegeben wurden, sodass das Ei aus der Flasche gedrückt wird
                     </label>
                 </div>
